@@ -54,7 +54,7 @@ const Profile = () => {
       </motion.div>
       <div className="absolute top-10 right-5">
         <img
-          src="src/assets/Profile_img.png" // Replace with your actual image path
+          src="public/assets/Profile_img.png" // Replace with your actual image path
           alt="Profile-img"
           className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-lg"
         />
