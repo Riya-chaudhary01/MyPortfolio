@@ -2,23 +2,25 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard =({
+// ✅ Static path to the image in public/assets
+const github = "/assets/github.png";
+
+const ProjectCard = ({
   index,
   name,
   description,
   tags,
   image,
   source_code_link,
-}) =>{
+}) => {
   return (
-    <motion.dev variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-         options={{
+        options={{
           max: 45,
           scale: 1,
           speed: 450,
@@ -60,15 +62,15 @@ const ProjectCard =({
           ))}
         </div>
       </Tilt>
-    </motion.dev>
-  )
-}
+    </motion.div>
+  );
+};
 
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-      <p className={`${styles.sectionSubText} text-secondary`}>
+        <p className={`${styles.sectionSubText} text-secondary`}>
           My Work
         </p>
         <h2 className={`${styles.sectionHeadText} text-secondary`}>
@@ -88,13 +90,14 @@ const Works = () => {
           challenges, work with diverse technologies, and manage projects efficiently.
         </motion.p>
       </div>
+
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-           <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Works,"")
+export default SectionWrapper(Works, "");
