@@ -53,7 +53,7 @@ const experiences = [
     company_name: "Amazon Web Services",
     icon: Aws,
     iconBg: "#383E56",
-    date: "September 2023 - Novermber 2023",
+    date: "September 2023 - November 2023",
     points: [
       "Gained hands-on experience with AWS services like EC2, S3, IAM, and VPC...",
       "Developed practical skills in cloud security...",
@@ -64,7 +64,7 @@ const experiences = [
     company_name: "Zscaler",
     icon: Zscaler,
     iconBg: "#383E56",
-    date: "July 2024 - September",
+    date: "July 2024 - September 2024",
     points: [
       "Gained hands-on experience in networking concepts...",
       "Configured and managed Zscaler cloud security solutions...",
@@ -91,7 +91,7 @@ const education = [
     name: "Bachelor of Technology",
     institutename: "G.L. Bajaj Institute of Technology and Management",
     date: "2022-26",
-    points: ["", "Information Technology", "CGPA: 8.4/10"],
+    points: ["", "Computer Science And Engineering", "CGPA: 8.4/10"],
     icon: "/assets/college.png",
   },
 ];
@@ -124,11 +124,11 @@ const myProfiles = [
   {
     title: "LinkedIn",
     image: "/assets/linkedin_profile.png",
-    source_code_link: "https://www.linkedin.com/in/-bichukale-8a6302258",
+    source_code_link: "www.linkedin.com/in/riya-chaudhary-1a111b320",
   },
   {
     title: "Leetcode",
-    image: "/assets/leetcode_profile copy.png",
+    image: "/assets/leetcode_profile_copy.png",
     source_code_link: "https://leetcode.com/u/Riya_Chaudhary_1/",
   },
   {

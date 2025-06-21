@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
+
 import { styles } from "../styles";
 import { education } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -24,21 +25,22 @@ const EducationCard = ({ education }) => {
         <div className='flex justify-center items-center w-full h-full'>
           <img
             src={education.icon}
-            alt={"icon"}
-            className='w-[100%] h-[100%] object-contain rounded-full'
+            alt={`${education.name} logo`}
+            className='w-full h-full object-contain rounded-full'
           />
         </div>
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{education.name}</h3>
-        <h5 className="text-white text-[20px] font-bold">{education.institutename}</h5>
+        <h3 className='text-white text-[24px] font-bold'>{education.name}</h3>
+        <h5 className='text-white text-[20px] font-semibold'>{education.institutename}</h5>
       </div>
-      <ul className="mt-5  ml-5 space-y-2">
+
+      <ul className='mt-5 ml-5 space-y-2 list-disc'>
         {education.points.map((point, index) => (
           <li
             key={`education-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className='text-white-100 text-[14px] tracking-wider'
           >
             {point}
           </li>
@@ -54,7 +56,8 @@ const Education = () => {
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText} text-center`}>Education</h2>
       </motion.div>
-      <div className="mt-20 flex flex-col">
+
+      <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
           {education.map((edu, index) => (
             <EducationCard key={`education-${index}`} education={edu} />
