@@ -19,7 +19,7 @@ const Aws = "/assets/company/Aws.png";
 const threejs = "/assets/tech/threejs.svg";
 const AmazonClone = "/assets/AmazonClone.png";
 const Food = "/assets/Food.png";
-const project1 = "/assets/project 1.png"; // NOTE: remove spaces in file name if possible
+const project1 = "/assets/project1.png"; // NOTE: remove spaces in file name if possible
 
 export const navLinks = [
   { id: "about", title: "About" },
