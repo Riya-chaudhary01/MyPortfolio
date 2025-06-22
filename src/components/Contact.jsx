@@ -68,7 +68,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <a
-          href="/ResumeRiya.pdf" // Make sure ResumeRiya.pdf is in the `public` folder
+          href="/assets/ResumeRiya.pdf" // Make sure ResumeRiya.pdf is in the `public` folder
           download="ResumeRiya.pdf"
           className="mt-4 inline-block bg-red-500 hover:bg-red-600 py-3 px-6 text-white font-bold rounded-xl shadow-md shadow-primary transition-all"
         >

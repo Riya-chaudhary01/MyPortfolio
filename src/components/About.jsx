@@ -1,12 +1,13 @@
-import React from 'react';
-import Tilt from 'react-parallax-tilt';
-import { motion } from 'framer-motion';
+import React from "react";
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
-import SectionWrapper from '../hoc/SectionWrapper';
-import { styles } from '../styles';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
+import { styles } from "../styles";
+import { services } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
+// Card Component
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -14,11 +15,9 @@ const ServiceCard = ({ index, title, icon }) => {
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
-        <div
-          className="bg-tertiary rounded-[20px] py-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
+        <div className="bg-tertiary rounded-[20px] py-12 min-h-[280px] flex justify-evenly items-center flex-col">
           <img
-            src={icon}
+            src={icon} // Make sure this image is in public/assets/
             alt={title}
             className="w-16 h-16 object-contain"
           />
@@ -31,6 +30,7 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+// About Section Component
 const About = () => {
   return (
     <>
@@ -59,4 +59,6 @@ const About = () => {
   );
 };
 
+// Export with section wrapper HOC
 export default SectionWrapper(About, "about");
+
